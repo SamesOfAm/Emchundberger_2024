@@ -1,0 +1,23 @@
+p.frankfurt {
+    left: 49%;
+    top: 27%;
+}
+
+img.frankfurt {
+    bottom: 100px;
+    z-index: -1;
+    width: 210px;
+    left: 40%;
+    top: 32%;
+    clip-path: polygon(54.86% -1.4%, 100.77% 32.76%, 99.33% 91.68%, 93.24% 100.35%, 21.24% 100.00%, 29.59% 90.24%, 6.07% 89.83%, 5.47% 34.65%);
+}
+
+.standorte-wrapper .blank_bottom {
+    z-index: -2 !important;
+}
+
+.standorte-wrapper p.weimar {
+    left: 59% !important;
+    bottom: 38% !important;
+}
+

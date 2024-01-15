@@ -1,0 +1,126 @@
+$primary: #86A7B6; //etwas dunkler #528196;
+$second: #324559;
+$third: #D1DFE6;
+
+$mint: #f0f7e0;
+
+$black: #3C3C3C;
+$gray_dark: #767676;
+$grey: #f0eee7;
+
+
+$yellow: rgb(255,204,0); // #f9c623
+$yellow_light: rgb(255, 226, 112);
+$light_gray: #f5f5f5;
+$yellow_light_filter: invert(83%) sepia(70%) saturate(394%) hue-rotate(333deg) brightness(101%) contrast(104%);
+$icon_yellow: invert(77%) sepia(88%) saturate(651%) hue-rotate(335deg) brightness(101%) contrast(106%);
+$icon_yellow_new: invert(78%) sepia(89%) saturate(1204%) hue-rotate(337deg) brightness(100%) contrast(96%);
+$icon_white: invert(100%) sepia(0%) saturate(0%) hue-rotate(107deg) brightness(101%) contrast(103%);
+$icon_primary:  invert(48%) sepia(31%) saturate(531%) hue-rotate(153deg) brightness(91%) contrast(86%);;
+$icon_second: invert(22%) sepia(19%) saturate(1754%) hue-rotate(64deg) brightness(95%) contrast(97%);
+
+
+$content_size: 1100px;
+$content_size_inner: $content_size - 200px;
+$content_size_inner_half: $content_size_inner/1.6;
+
+$abstand_boxen: 15px;
+$box_size: ($content_size/3)-($abstand_boxen*2);
+
+$container_size_13: 330px;
+$space: 20px;
+
+.space_l_r{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.space_40{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.space_40_up{
+  margin-top: 40px;
+}
+
+.space_40_down{
+  margin-bottom: 40px;
+}
+
+.space_60{
+  margin-top: 62px !important;
+  margin-bottom: 62px;
+}
+
+.center_image{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zentrieren{
+  width: unset;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+$radius: 10px;
+$container_size_23: ($container_size_13*2)+$space;
+
+$font: 'Barlow';
+
+.content_1_3{
+  width: $container_size_13;
+}
+
+.content_2_3{
+  width: $container_size_23;
+}
+
+$watermark: url("../icons/eva-icons42-trans.svg");
+
+@mixin bg{
+  background: $watermark no-repeat 400px 400px, $grad_full;
+  //background: linear-gradient(left, rgba($grad_full, $opacity), rgba($grad_full, $opacity)), url($watermark) no-repeat;
+}
+
+@mixin bg_m{
+  background: $watermark no-repeat 0px 320px, $grad_full_light !important;
+}
+
+@mixin bg_s{
+  background: $watermark no-repeat 400px 400px, $grad_full;
+}
+
+@mixin center {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@mixin x_center{
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.x_center{
+  @include x_center;
+}
+.center{
+  @include center;
+}

@@ -1,0 +1,90 @@
+@import "variables";
+
+body.bodyAboutUs{
+  .mod_pageimage {
+    height: 50vh;
+  }
+
+  .kran_wrapper{
+    width: 100%;
+    margin-top: 70px;
+    position: relative;
+    .kran{
+
+    }
+    .fakten_wrapper{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      //background: rgba(255,255,255,0.5);
+      top: 0;
+      height: 100%;
+      width: 100%;
+
+      .fakten_row{
+        position: absolute;
+        top: 64%;
+        display: flex;
+        justify-content: space-between;
+        width: 53vw;
+      }
+
+      .fakten{
+
+        p.value{
+          font-size: 100px;
+          font-weight: bold;
+          color: white;
+          text-shadow: -4px -4px 0px rgba(101,147,168,1);
+          background: unset;
+          margin-bottom: 0;
+          text-align: center;
+        }
+        p.desc{
+          font-size: 28px;
+          font-weight: bold;
+          color: white;
+          text-shadow: -3px -2px 0px rgba(101,147,168,1);
+          text-transform: uppercase;
+          margin-bottom: 0;
+        }
+      }
+      .ma{
+
+      }
+      .year{
+        margin-top: -4px;
+      }
+      .pro{
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .icon_wrapper{
+    text-align: center;
+
+    .flexbox_wrapper{
+      width: $content_size;
+
+      .icon{
+        width: 50px;
+        margin: 0 auto;
+      }
+
+      .ce_text{
+        padding: 0;
+      }
+    }
+  }
+
+  .section_1{
+    background-color: unset;
+  }
+
+  .section_3{
+    margin: 100px 0 0 0;
+  }
+
+
+}

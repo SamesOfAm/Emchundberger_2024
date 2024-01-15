@@ -1,0 +1,40 @@
+<!-- rsce_webgl.html5 -->
+<script>
+	const content = [
+    `{{insert_article::<?= $this->articleId1 ?>}}`,
+    `{{insert_article::<?= $this->articleId2 ?>}}`,
+    `{{insert_article::<?= $this->articleId3 ?>}}`,
+    `{{insert_article::<?= $this->articleId4 ?>}}`,
+    `{{insert_article::<?= $this->articleId5 ?>}}`,
+    `{{insert_article::<?= $this->articleId6 ?>}}`,
+    `{{insert_article::<?= $this->articleId7 ?>}}`,
+    `{{insert_article::<?= $this->articleId8 ?>}}`,
+    `{{insert_article::<?= $this->articleId9 ?>}}`
+  ];
+</script>
+
+<div class="canvas-container">
+  <div class="webglbuttoncontainer"><div class="ce_hyperlink link_button_2 webglbutton">
+      <a href="#" class="hyperlink_txt current" onclick="switchWebGL(0, this); return false;"><?= $this->buttonText1 ?></a>
+    </div><div class="ce_hyperlink link_button_2 webglbutton">
+      <a href="#" class="hyperlink_txt" onclick="switchWebGL(1, this); return false;"><?= $this->buttonText2 ?></a>
+    </div><div class="ce_hyperlink link_button_2 webglbutton">
+      <a href="#" class="hyperlink_txt" onclick="switchWebGL(2, this); return false;"><?= $this->buttonText3 ?></a>
+    </div>
+  </div>
+  <iframe class="canvas-container" id="gameContainer" src="/files/assets/webgl/unity_content.html?v=1" width="400" height="200" scrolling="no">
+    <p>Your browser does not support iframes.</p>
+  </iframe>
+  <div class="webgloverlaycontent">
+    <div class="closeWebglOverlay" onclick="return closeClicked();">
+      <img src="/files/assets/icon/X-Button.svg">
+    </div>
+    <div class="content">
+    </div>
+  </div>
+</div>
+<div id="unity-mobile-warning" style="display: none;">
+  WebGL builds are not supported on mobile devices.
+</div>
+
+<script type="text/javascript" src="{{file::<?= $this->modelScript ?>}}?v=1"></script>

@@ -1,0 +1,220 @@
+@import "variables";
+
+//________________________________________Artikel
+
+.mod_article.trennstrich{
+  width: $content_size;
+  margin: 50px auto;
+  border-top: 1px solid $primary;
+  hr{
+    border: 0 !important;
+  }
+}
+
+
+.mod_article.section_1, .mod_article.section_1_1,
+.mod_article.section_3, .mod_article.section_1_2,
+.mod_article.section_1_3{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .flexbox_wrapper{
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+    .flexbox_box{
+      max-width: $content_size_inner_half;
+      width: 59%;
+    }
+  }
+}
+
+.mod_article.section_1, .mod_article.section_1_1,
+.mod_article.section_3, .mod_article.section_1_2{
+  width: 100%;
+}
+
+.mod_article.section_1_3 {
+  max-width: $content_size;
+}
+
+
+
+// ____________________Bild + Text
+.mod_article.section_1 {
+  background-color: $primary;
+  margin: 40px 0;
+
+  .ce_image {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+
+    .image_container {
+      height: 100%;
+      img{
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+  h1,h2,h3.h4,h5,h6,p{
+    color: white;
+    text-align: left;
+  }
+  .link_button_1 a{
+    border: 1px solid #fff;
+  }
+  .link_button_1 a:hover{
+    border: 1px solid transparent;
+  }
+}
+
+.mod_article.section_1_2 {
+  background-color: $third;
+  margin: 40px 0;
+
+  .ce_image {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+
+    .image_container{
+      height: 100%;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  h1,h2,h3.h4,h5,h6,p{
+    color: $black;
+    text-align: left;
+  }
+  .link_button_1 {
+    a {
+      border: 1px solid $black;
+      color: $black;
+      background-color: $third;
+    }
+
+    a:hover{
+      background-color: $primary;
+      color: white;
+      border: 1px solid $primary;
+    }
+  }
+}
+
+// _______________Video
+.section_2{
+  max-width: $content_size;
+  margin: 20px auto 130px auto;
+}
+
+
+//_________________ Text + Bild mit green quad
+.mod_article.section_3{
+  flex-direction: row-reverse;
+
+  .flexbox_wrapper .flexbox_box{
+    width: 660px;
+
+    .ce_headline{
+      margin-top: 0;
+    }
+  }
+
+  .ce_image:first-child{
+    width: 38%;
+    height: 100%;
+    object-fit: cover;
+    img{
+      display: block;
+    }
+  }
+
+  .quad_2{
+    background-color: $mint;
+    height: 60px;
+    width: 60px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    position: absolute;
+  }
+}
+
+
+//_____________ left right Kompetenzen
+
+.mod_article.section_6{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin: 60px 0;
+
+  .flexbox_wrapper{
+    justify-content: center;
+
+    .flexbox_box{
+      width: 660px;
+
+      .ce_headline{
+        margin-top: 0;
+      }
+    }
+  }
+
+  .ce_image:first-child{;
+    height: 100%;
+    object-fit: cover;
+    img{
+      display: block;
+    }
+  }
+}
+
+
+
+//_________________________ Fullpage
+.mod_article.section_4{
+
+  width: 100%;
+
+  .ce_text, .ce_headline, .mod_breadcrumb, .ce_hyperlink {
+    width: unset;
+  }
+
+  .ce_image img{
+    width: 1200px;
+  }
+
+  .flexbox_wrapper{
+    width: unset;
+  }
+}
+
+
+
+//Button + Text im Bild
+.mod_article.section_5{
+  position: absolute;
+  top: -50vh;
+  .ce_text{
+    p,h1,h2,h3,h4,h5,h6{
+      color: white;
+    }
+    p{
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 1.1;
+      padding-bottom: 5px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div title="Den Artikel lesen" class="layout_short_jobs arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope
+     itemtype="http://schema.org/Article">
+
+    <h2 itemprop="name"><?= $this->linkHeadline ?></h2>
+
+
+    <?php if ($this->hasMetaFields): ?>
+        <p class="info">
+            <time datetime="<?= $this->datetime ?>"
+                  itemprop="datePublished"><?= date_format(date_create($this->date), "d.m.Y") ?></time>  <?= $this->commentCount ?>
+        </p>
+    <?php endif; ?>
+  
+        <div class="ce_text block" itemprop="description">
+            <?php
+/*            if (strlen($this->teaser) > 120){
+                echo substr($this->teaser,0,120) . '...';
+            }else{
+                echo $this->teaser;
+            }
+            */
+            echo $this->teaser?>
+        </div>
+       
+</div>

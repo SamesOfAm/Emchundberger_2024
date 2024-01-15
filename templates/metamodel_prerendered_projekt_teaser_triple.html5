@@ -1,0 +1,117 @@
+<?php if ($_GET['do'] === 'metamodel_mm_projekte'): ?>
+    <!--    --><? //=  $this->data[0]['text']['projekt_name'] ?>
+<?php else : ?>
+
+    <?php
+        $activeProjects = 0;
+        foreach($this->data as $item) {
+            if($item['raw']['aktiv'] === '1') {
+                $activeProjects++;
+            }
+        }
+    ?>
+    <?php if($activeProjects > 2): ?>
+        <div class="project desktop">
+            <div class="ce_sliderStart first block">
+                <div class="content-slider" data-config="0,300,0,1">
+                    <div class="slider-wrapper">
+                        <?php
+                        $tripleBlock = 2;
+                        $tripleBlockEnd = false;
+                        ?>
+                        <?php foreach ($this->data as $arrItem): ?>
+                            <?php if ($arrItem['raw']['aktiv'] === "1"): ?>
+
+
+                                <?php $this->block('item'); ?>
+
+
+                                <?php if ($tripleBlock === 2) {
+                                    $tripleBlock = 0;
+                                    ?>
+                                    <div class="triple-teaser-wrapper">
+                                    <?php
+
+                                } else {
+                                    $tripleBlock++;
+                                    if($tripleBlock === 2){
+                                        $tripleBlockEnd = true;
+                                    }
+                                }
+                                ?>
+
+
+                                <a class="project_box" href="<?= $arrItem['actions']['jumpTo']['href']; ?>">
+                                    <div class="project_image">
+                                        <div>
+                                            <img src="<?= $arrItem['text']['seitenbild']; ?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="desc">
+                                            <p class="name"><?= $arrItem['text']['projekt_name']; ?></p>
+                                        </div>
+                                        <div class="desc">
+                                            <p><?= $arrItem['text']['start_year']; ?></p>
+                                            <p class="info"><?= $arrItem['raw']['kategorie']['name']; ?></p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <?php if ($tripleBlockEnd === true) {
+                                    $tripleBlockEnd = false;
+                                    ?>
+                                    </div>
+                                <?php } ?>
+
+
+                                <?php $this->endblock(); ?>
+
+
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+            <nav class="slider-control">
+                <a href="#" class="slider-prev"><img src="files/assets/icon/Pfeil_Blau_links.svg"></a>
+                <span class="slider-menu"></span>
+                <a href="#" class="slider-next"><img src="files/assets/icon/Pfeil_Blau_rechts.svg"></a>
+            </nav>
+        </div>
+    <?php else : ?>
+        <div class="single-or-double-project">
+    <?php foreach($this->data as $item): ?>
+        <?php if($item['raw']['aktiv']): ?>
+
+                <a class="project_box_oneImage" href="<?= $item['actions']['jumpTo']['href']; ?>">
+                    <div class="project_image">
+                        <div>
+                            <img src="<?= $item['text']['seitenbild']; ?>">
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <div class="desc">
+                            <p class="name"><?= $item['text']['projekt_name']; ?></p>
+                        </div>
+                        <div class="desc">
+                            <p><?= $item['text']['start_year']; ?></p>
+                            <p class="info"><?= $item['raw']['kategorie']['name']; ?></p>
+                        </div>
+                    </div>
+                </a>
+        <?php endif; ?>
+
+    <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+
+
+
+<?php endif; ?>
+
+<?php
+// Debug items.
+/*    dump($this->data);*/
+?>

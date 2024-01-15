@@ -1,0 +1,36 @@
+<section class="ce_accordionStart ce_accordion block akkordeon">
+    <div class="toggler">
+        <span><?= $this->headline ?></span>
+        <img src="files/assets/icon/Pfeil_Akkordeon_geschlossen.svg" class="icon_accord close">
+        <img src="files/assets/icon/Pfeil_Akkordeon_offen.svg" class="icon_accord open">
+    </div>
+    <div class="accordion">
+
+            <div class="layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+
+                <?php if ($this->addImage): ?>
+                    <?php $this->insert('image', $this->arrData); ?>
+                <?php endif; ?>
+
+                <div class="ce_text block" itemprop="description">
+                    <?php if ($this->hasMetaFields): ?>
+                        <p class="info">
+                            <time datetime="<?= $this->datetime ?>"
+                                  itemprop="datePublished"><?= date_format(date_create($this->date), "d.m.Y") ?></time>  <?= $this->commentCount ?>
+                        </p>
+                    <?php endif; ?>
+
+                    <!--Content-->
+                    <?= $this->teaser ?>
+
+                    <?php if ($this->hasText || $this->hasTeaser): ?>
+                        <p class="more"><?= $this->more ?></p>
+                    <?php endif; ?>
+                </div>
+
+
+            </div>
+
+    </div>
+</section>
+
