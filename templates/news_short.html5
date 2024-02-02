@@ -18,7 +18,7 @@
         </div>
         <?php else: { ?>
             <figure class="image_container float_above">
-                <a href="<?= $this->arrData[link]; ?>" title="Den Artikel lesen">
+                <a href="<?= $this->link; ?>" title="Den Artikel lesen">
                     <img src="/files/assets/layout/logo_light.svg" width="8000" height="6000" alt="" itemprop="image">
                 </a>
             </figure>

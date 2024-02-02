@@ -163,7 +163,7 @@ body .mod_pageimage .slider-control a, body.bodyProject .mod_pageimage .slider-c
               color: $primary;
             }
           }
-          li.last a{
+          li.last a, li.last strong {
               border-right: unset;
               margin-right: 0;
               padding-right: 0;
