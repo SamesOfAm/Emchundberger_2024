@@ -134,6 +134,11 @@ body{
   }
 }
 
+.mod_newsreader .layout_full {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1265px) {
   .project_new_image {
     img {
