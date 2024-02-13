@@ -4,4 +4,13 @@
     console.log(results.offsetTop);
     window.scrollTo(0, results.offsetTop);
   }
+  if(document.querySelector('.mod_newscategories')) {
+    const categoryContainer = document.querySelector('.mod_newscategories');
+    const allSpans = categoryContainer.querySelectorAll('span');
+    allSpans.forEach(span => {
+      if (span.innerHTML === 'Alle Kategorien') {
+        span.innerHTML = 'Alle Standorte';
+      }
+    })
+  }
 </script>
