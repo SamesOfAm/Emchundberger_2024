@@ -15,12 +15,12 @@
 
     <div class="menu_block_wrapper">
         <div class="nav_punkte">
-            {{insert_module::9}}
+            {{iflng::de}}{{insert_module::9}}{{iflng::de}}{{iflng::fr}}{{insert_module::28}}{{iflng::fr}}
             {{insert_article::25}}
         </div>
 
         <div class="nav_bilder">
-            {{insert_article::24}}
+            {{insert_article::379}}
         </div>
 
     </div>
