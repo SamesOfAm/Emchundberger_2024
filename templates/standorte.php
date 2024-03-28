@@ -23,7 +23,7 @@
     <a href="{{link_url::34}}"><img class="standort frankfurt" src="files/assets/layout/standorte/frankfurt.png"></a>
 
     <p class="strassburg">Strasbourg</p>
-    <a href="{{link_url::56}}"><img class="standort strassburg" src="files/assets/layout/standorte/strassburg.png"></a>
+    <a href="{{iflng::de}}{{link_url::56}}{{iflng::fr}}{{link_url::82}}{{iflng}}"><img class="standort strassburg" src="files/assets/layout/standorte/strassburg.png"></a>
 
     <p class="hannover">Hannover</p>
     <a href="{{link_url::55}}"><img class="standort hannover" src="files/assets/layout/standorte/hannover.png"></a>
