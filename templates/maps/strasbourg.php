@@ -1,11 +1,11 @@
 <div class="embed">
     <div id="data-policy" class="data-policy">
-        <p>Aus Datenschutzgründen benötigen wir Ihre Zustimmung um die OpenStreetMaps Karte zu laden.<br>
-            Für weitere Informationen beachten Sie unsere Datenschutzerklärung<br>
+        <p>Pour des raisons de protection des données, nous avons besoin de votre accord pour charger la carte OpenStreetMaps.<br>
+            Pour plus d'informations, veuillez consulter notre déclaration de confidentialité<br>
 
-            <a target="_blank" href="{{link_url::12|urlattr}}">Mehr erfahren</a>
+            <a target="_blank" href="{{link_url::12|urlattr}}">En savoir plus</a>
             <br>
-            <button onclick="mapLoad()">Ich stimme zu</button>
+            <button onclick="mapLoad()">J'accepte</button>
         </p>
     </div>
 

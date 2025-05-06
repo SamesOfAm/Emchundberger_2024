@@ -173,3 +173,19 @@ body .mod_pageimage .slider-control a, body.bodyProject .mod_pageimage .slider-c
     }
 
   }
+
+  .badge {
+    position: absolute;
+    bottom: -100px;
+    right: 10vw;
+    width: 150px;
+    height: 200px;
+  }
+
+  @media screen and (max-width: 1265px) {
+    .badge {
+      bottom: 0;
+      width: 100px;
+      height: 130px;
+    }
+  }

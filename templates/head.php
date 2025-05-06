@@ -18,6 +18,7 @@
 <link rel="mask-icon" href="/files/assets/icon/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#00aba9">
 <meta name="theme-color" content="#ffffff">
+<meta name="google-site-verification" content="cl2D9leaeVlQnf6QxFIU-Jzl5nJXZJ8Rqw51uPLWNB0" />
 
 
 

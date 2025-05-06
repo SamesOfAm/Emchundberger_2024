@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="c41d1375-3a15-43ec-955f-54e323c4cb4b" name="Server" url="http://3dreams.com">
+      <webServer id="c41d1375-3a15-43ec-955f-54e323c4cb4b" name="Server (project level)" url="http://3dreams.com">
         <fileTransfer host="3dreams.com" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

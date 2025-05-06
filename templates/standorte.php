@@ -19,8 +19,8 @@
     <p class="weimar">Weimar</p>
     <a href="{{link_url::29}}"><img class="standort weimar" src="files/assets/layout/standorte/weimar.png"></a>
 
-    <p class="frankfurt">Frankfurt</p>
-    <a href="{{link_url::34}}"><img class="standort frankfurt" src="files/assets/layout/standorte/frankfurt.png"></a>
+    <!-- <p class="frankfurt">Frankfurt</p>
+    <a href="{{link_url::34}}"><img class="standort frankfurt" src="files/assets/layout/standorte/frankfurt.png"></a> -->
 
     <p class="strassburg">Strasbourg</p>
     <a href="{{iflng::de}}{{link_url::56}}{{iflng::fr}}{{link_url::82}}{{iflng}}"><img class="standort strassburg" src="files/assets/layout/standorte/strassburg.png"></a>

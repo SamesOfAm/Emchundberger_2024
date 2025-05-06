@@ -10,7 +10,7 @@
     </div>
 
     <iframe id="map_iframe" class="map_frame" frameborder="0"
-            allowfullscreen data-src="//umap.openstreetmap.fr/de/map/karlsruhe_877848?
+            allowfullscreen data-src="https://umap.openstreetmap.fr/de/map/karlsruhe2_1177605#15/49.0065/8.4108?
             scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&
     allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&
     datalayersControl=false&onLoadPanel=undefined&captionBar=false">

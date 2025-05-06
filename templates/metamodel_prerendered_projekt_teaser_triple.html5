@@ -103,15 +103,11 @@
                 </a>
         <?php endif; ?>
 
-    <?php endforeach; ?>
         </div>
+    <?php endforeach; ?>
     <?php endif; ?>
 
 
 
 <?php endif; ?>
-
-<?php
-// Debug items.
-/*    dump($this->data);*/
-?>
+</div>
