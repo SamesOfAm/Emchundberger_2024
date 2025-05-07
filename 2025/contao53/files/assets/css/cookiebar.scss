@@ -1,0 +1,32 @@
+@import 'variables';
+
+.ce_optin_fallback {
+  width:90%;
+  max-width:900px;
+  margin:0 auto;
+  position: relative;
+  .optin-text {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 100%;
+    background: #cecece;
+    p {
+      text-align: center;
+    }
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 120px;
+    height: 75px;
+    background: url('../layout/youtube.svg') no-repeat 0/contain;
+  }
+}
+
+cms-cookie-bar, cms-accept-tags {
+  --btn-accept-bg-color: #86A7B6 !important;
+}

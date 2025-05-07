@@ -1,0 +1,3 @@
+<!--<div class="sketchfab-embed-wrapper"> -->
+<iframe title="A 3D model" width="960" height="960" src="https://sketchfab.com/models/fd7d85694a794f19bac818a0a335753d/embed?autospin=0.2[&]autostart=1[&]ui_controls=1[&]ui_infos=1[&]ui_inspector=1[&]ui_stop=1[&]ui_watermark=1[&]ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<!-- </div> -->

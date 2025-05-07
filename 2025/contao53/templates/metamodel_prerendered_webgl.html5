@@ -1,0 +1,5 @@
+<div class="webgl">
+    <?php foreach ($this->data as $arrItem): ?>
+        <?= $arrItem['article']; ?>
+    <?php endforeach; ?>
+</div>

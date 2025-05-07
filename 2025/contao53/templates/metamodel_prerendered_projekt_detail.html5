@@ -1,0 +1,271 @@
+<?php
+    $point = null;
+?>
+
+<?php if($_GET['do'] === 'metamodel_mm_projekte'): ?>
+    <!--    --><?//=  $this->data[0]['text']['projekt_name'] ?>
+<?php else : ?>
+<?php $kat = ''; ?>
+
+    <?php if (count($this->data)): ?>
+            <?php foreach ($this->data as $arrItem): ?>
+                <?php $kat = $arrItem['raw']['kategorie']['__SELECT_RAW__']['id'] ?>
+                <?php if($arrItem['raw']['aktiv'] === "1"): ?>
+                    <?php $this->block('item'); ?>
+
+                            <header id="header">
+                                <div class="inside">
+                                    {{insert_module::2}}
+                                    {{insert_module::8}}
+                                </div>
+                                <div class="mod_pageimage block">
+                                    <figure class="image_container">
+                                        <img src="<?= $arrItem['text']['seitenbild'] ?>">
+                                    </figure>
+                                </div>
+                            </header>
+
+                            <div id="container">
+                                <div id="main">
+                                    <div class="inside">
+                                        <!-- Breadcrumb -->
+                                        {{insert_module::4}}
+
+
+                                        <!-- Content -->
+                                        <div class="mod_article first block">
+                                            <h1 class="ce_headline"><?= $arrItem['text']['project_headline'] ?></h1>
+                                            <h4 class="ce_headline first"><?= $arrItem['text']['description_headline'] ?></h4>
+                                            <div class="specs">
+                                              <?php if($arrItem['text']['services']): ?><p><strong>Name:</strong> <?= $arrItem['text']['projekt_name'] ?></p><?php endif; ?>
+                                              <?php if($arrItem['text']['services']): ?><p><strong>Leistungen:</strong> <?= $arrItem['text']['services'] ?></p><?php endif; ?>
+                                                <?php if($arrItem['text']['construction_type']): ?><p><strong>Bauweise:</strong> <?= $arrItem['text']['construction_type'] ?></p><?php endif; ?>
+                                            </div>
+                                            <div class="content-text block">
+                                                <?= $arrItem['text']['description_text'] ?>
+                                            </div>
+                                        </div>
+
+<!--                                        <?php /*if($arrItem['raw']['leistungsumfang'][0][0]['value'] !== ""): */?>
+                                        <div class="mod_article block">
+                                            <h4 class="ce_headline first">Leistungsumfang</h4>
+                                            <div class="content-text last block">
+                                                <ul>
+                                                    <?php /*foreach ($arrItem['raw']['leistungsumfang'] as $point):  */?>
+                                                    <li><?/*= $point[0]['value']; */?></li>
+                                                    <?php /*endforeach; */?>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        --><?php /*endif; */?>
+
+
+                                        <!-- Sub-Infomations -->
+                                      <div class="sub_nav">
+
+                                        <?php if($arrItem['raw']['start_year']): ?>
+                                              <div class="sub_nav_box">
+                                                  <div class="col_1">
+                                                      <img src="files/assets/icon/calendar_month_FILL0_wght400_GRAD0_opsz48.svg">
+                                                  </div>
+                                                  <div class="col_2">
+                                                    <?php if($arrItem['raw']['finish_year']): ?>
+                                                          <p class="desc">Zeitraum</p>
+                                                          <p class="info"><?= $arrItem['raw']['start_year'] ?> - <?= $arrItem['raw']['finish_year'] ?></p>
+                                                      <?php else: ?>
+                                                          <p class="desc">Startjahr</p>
+                                                          <p class="info"><?= $arrItem['raw']['start_year'] ?></p>
+                                                      <?php endif; ?>
+                                                  </div>
+                                              </div>
+                                        <?php endif; ?>
+                                          <?php if($arrItem['text']['place']): ?>
+                                            <div class="sub_nav_box">
+                                                <div class="col_1">
+                                                    <img src="files/assets/icon/location_on_FILL0_wght400_GRAD0_opsz48.svg">
+                                                </div>
+                                                <div class="col_2">
+                                                    <p class="desc">Ort</p>
+                                                    <p class="info"><?= $arrItem['raw']['place'] ?></p>
+                                                </div>
+                                            </div>
+                                          <?php else: ?>
+                                          <?php endif; ?>
+
+                                            <div class="sub_nav_box">
+                                                <div class="col_1">
+                                                    <img src="files/assets/icon/category_FILL0_wght400_GRAD0_opsz48.svg">
+                                                </div>
+                                                <div class="col_2">
+<!--                                                    <?php /*if($arrItem['raw']['kategorie'][0]['name'] !== ""): */?>
+                                                        <p class="desc">Kategorie</p>
+                                                        <?php /*foreach ($arrItem['raw']['kategorie'] as $cat):  */?>
+                                                            <p class="info"><?/*= $cat['name']; */?></p>
+                                                        <?php /*endforeach; */?>
+                                                    --><?php /*endif; */?>
+
+                                                    <p class="desc">Kategorie</p>
+                                                    <p class="info"><?= $arrItem['raw']['kategorie']['name']; ?></p>
+
+                                                </div>
+                                            </div>
+
+                                          <?php if($arrItem['text']['client']): ?>
+                                              <div class="sub_nav_box">
+                                                    <div class="col_1">
+                                                        <img src="files/assets/icon/client.svg">
+                                                    </div>
+                                                    <div class="col_2">
+
+                                                        <p class="desc">Auftraggeber</p>
+                                                        <p class="info"><?= $arrItem['text']['client']; ?></p>
+
+                                                    </div>
+                                                </div>
+                                          <?php endif; ?>
+
+                                          <?php if($arrItem['text']['cost']): ?>
+                                            <div class="sub_nav_box">
+                                                <div class="col_1">
+                                                    <img src="files/assets/icon/cost.svg">
+                                                </div>
+                                                <div class="col_2">
+
+                                                    <p class="desc">Baukosten</p>
+                                                    <p class="info"><?= $arrItem['text']['cost']; ?></p>
+
+                                                </div>
+                                            </div>
+                                          <?php endif; ?>
+
+                                        </div>
+
+                                        <!--Content-->
+                                        <?php if($arrItem['raw']['slider_img']['path'][0] !== NULL): ?>
+
+
+                                        <div class="mod_article block">
+                                            <div class="ce_sliderStart first block">
+                                                <div class="content-slider" data-config="0,300,0,1">
+                                                    <div class="slider-wrapper">
+                                                    <?php foreach($arrItem['raw']['slider_img']['path'] as $image): ?>
+                                                        <div class="ce_image block">
+                                                            <figure class="image_container">
+                                                                <img src="<?= $image; ?>" itemprop="image">
+                                                            </figure>
+                                                        </div>
+                                                    <?php endforeach; ?>
+                                                    </div>
+                                                </div>
+                                                <nav class="slider-control">
+                                                    <a href="#" class="slider-prev"><img src="files/assets/icon/Pfeil_Blau_links.svg"></a>
+                                                    <span class="slider-menu"></span>
+                                                    <a href="#" class="slider-next"><img src="files/assets/icon/Pfeil_Blau_rechts.svg"></a>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <?php else : ?>
+                                            <div class="noSlider">
+                                                <?php $this->block('noItem'); ?>
+                                                <p class="info"><?= $this->noItemsMsg ?></p>
+                                                <?php $this->endblock(); ?>
+                                            </div>
+
+                                        <?php endif; ?>
+
+                                        <div class="space_60"></div>
+
+                                        <!-- Content ENDE -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                    <?php $this->endblock(); ?>
+                <?php endif; ?>
+            <?php endforeach; ?>
+    <?php else : ?>
+        <?php $this->block('noItem'); ?>
+        <p class="info"><?= $this->noItemsMsg ?></p>
+        <?php $this->endblock(); ?>
+    <?php endif; ?>
+
+    <?php
+/*      echo '<div class="mod_article project_triple block" id="article-85">
+        <h2 class="ce_headline first">Weitere Projekte</h2>
+        <section id="293" class="ce_flexbox_umschlag_anfang flexbox_wrapper block">
+            <div class="ce_metamodel_content block">
+                <div class="project desktop">
+                    <div class="ce_sliderStart first block">
+                        <div class="content-slider" data-config="0,300,0,1" style="visibility: visible;">
+                            <div class="triple-teaser-wrapper" data-index="0">'
+    */?><!--
+
+
+  <?php
+/*  $sql = "SELECT id, projekt_name, seitenbild, start_year, end_year, kategorie FROM mm_projekte WHERE kategorie=?";
+  $dbQuery = Database::getInstance()->prepare($sql);
+  $dbResult = $dbQuery->execute($kat);
+  $counter = 0;
+  while($row = $dbResult->fetchRow()){
+    $id = $row[0];
+    $projekt_name = $row[1];
+    $seitenbild = $row[2];
+    $start_year = $row[3];
+    $end_year = $row[4];
+    $kategorie = $row[5];
+    if($kategorie === $kat) {
+      if($counter % 3 === 0 && $counter > 0) {
+        echo '</div>
+                <div class="triple-teaser-wrapper" data-index="0">';
+      }
+
+      echo '<a class="project_box" href="/projekt-details/projekt/' . $id . '">
+                                    <div class="project_image">
+                                        <div>
+                                            <img src="{{file::' . $seitenbild . '}}">
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="desc">
+                                            <p class="name">' . $projekt_name . '</p>
+                                        </div>
+                                        <div class="desc">
+                                            <p>' . $start_year . ' - ' . $end_year . '</p>
+                                            <p class="info">' . $kategorie . '</p>
+                                        </div>
+                                    </div>
+                                </a>';
+      $counter++;
+    }
+  }
+  */?>
+
+  --><?php
+/*    echo '</div></div></div>
+        <nav class="slider-control">
+                <a href="#" class="slider-prev"><img src="files/assets/icon/Pfeil_Blau_links.svg"></a>
+                <span class="slider-menu"><b data-index="0" class="active">•</b><b data-index="1">•</b><b
+                        data-index="2">•</b><b data-index="3">•</b></span>
+                <a href="#" class="slider-next"><img src="files/assets/icon/Pfeil_Blau_rechts.svg"></a>
+            </nav>
+        </div>
+    </div>
+    </section>
+    <section id="297" class="ce_flexbox_umschlag_anfang flexbox_wrapper block">
+        <div class="ce_hyperlink link_button_2 block">
+            <a href="projekte" class="hyperlink_txt" title="Alle Projekte">Alle Projekte</a>
+        </div>
+    </section>
+        </div>
+</div>'
+  */?>
+
+
+<?php endif; ?>
+
+
+<?php
+// Debug items.
+//dump($this->data);
+?>

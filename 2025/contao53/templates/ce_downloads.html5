@@ -1,0 +1,23 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <ul>
+    <?php foreach ($this->files as $file): ?>
+      <li class="download-element ext-<?= $file['extension'] ?>">
+        <a href="<?= $file['href'] ?>" title="<?= $file['title'] ?>"
+           type="<?= $file['mime'] ?>" class="">
+            <img class="first-arrow" src="files/assets/icon/download-solid.svg">
+            <img class="hover-arrow" src="files/assets/icon/download-solid.svg">
+            <div>
+                <span class="size"> <?= $file['link'] ?></span>
+
+                <!--<span class="size"> | <?/*= $file['mime'] */?></span>-->
+                <span class="size"><?= $file['filesize'] ?></span>
+            </div>
+        </a>
+      </li>
+    <?php endforeach; ?>
+  </ul>
+
+<?php $this->endblock(); ?>

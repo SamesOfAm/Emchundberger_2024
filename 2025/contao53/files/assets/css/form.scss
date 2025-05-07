@@ -1,0 +1,18 @@
+@import "variables";
+
+.mod_article.contact.section_1_1 {
+  width: 90%;
+  max-width: 900px;
+  margin: 70px auto;
+  display: block;
+  .ce_form {
+    .widget-checkbox fieldset {
+      border: none;
+      padding: 5px 0;
+    }
+  }
+  .ce_form select, .ce_form textarea, .ce_form input[type="text"],
+  .ce_form input[type="email"], .ce_form input[type="tel"] {
+    width: 90%;
+  }
+}

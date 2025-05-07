@@ -1,0 +1,46 @@
+@import "variables";
+
+
+
+.mod_article{
+
+  .content-text,.ce_text{
+
+    line-height: 1.4;
+    font-weight: 300;
+
+    a{
+
+      color: $primary;
+      font-weight: 500;
+      transition: 0.3s;
+
+    }
+    a:hover{
+
+      transition: 0.3s;
+      color: $second;
+
+    }
+
+    ul{
+
+      padding-left: 26px;
+
+    }
+    ul li:before{
+
+      content: "\00BB";
+      height: auto;
+      display: inline-block;
+      width: 26px;
+      margin-left: -27px;
+      font-size: 20px;
+      color: $primary;
+      font-weight: 400;
+
+    }
+
+  }
+
+}
