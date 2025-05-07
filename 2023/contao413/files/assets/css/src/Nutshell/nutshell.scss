@@ -53,20 +53,20 @@
 
 
 // Mixins
-@import "files/assets/css/src/Nutshell/mixins/general";
-@import "files/assets/css/src/Nutshell/mixins/responsive";
+@import "mixins/general";
+@import "mixins/responsive";
 
 
 // GENERIC
-@import "files/assets/css/src/Nutshell/generic/normalize";
-@import "files/assets/css/src/Nutshell/generic/contao-reset";
-@import "files/assets/css/src/Nutshell/generic/box-sizing";
+@import "generic/normalize";
+@import "generic/contao-reset";
+@import "generic/box-sizing";
 
 
 // BASE
 /*@import "base/shared";
 @import "base/page";*/
-@import "files/assets/css/src/Nutshell/base/type";
+@import "base/type";
 /*@import "base/grid";
 @import "base/layout";*/
 
